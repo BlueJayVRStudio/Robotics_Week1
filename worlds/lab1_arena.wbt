@@ -8,8 +8,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.27832827837950347 -0.5455411742126348 0.7905176763950325 5.136956250738471
-  position -0.9571327860131698 1.3989349174914103 1.3461358407661865
+  orientation -0.27177910083317774 -0.47273463425636403 0.8382470315633759 5.080876619493112
+  position -0.42526346782235136 0.816026866312605 0.6597722221167206
 }
 TexturedBackground {
 }
@@ -29,11 +29,16 @@ Solid {
         roughness 0.5
         metalness 0.5
       }
-      geometry Box {
+      geometry DEF BOX1 Box {
         size 0.2 0.2 0.2
       }
     }
   ]
+  boundingObject USE BOX1
+  physics Physics {
+    density -1
+    mass 0.1
+  }
 }
 PointLight {
   attenuation 0 0 1
