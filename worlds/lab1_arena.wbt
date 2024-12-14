@@ -8,8 +8,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.1313007111782419 0.8313520291607777 0.540012895081539 0.5690880733803462
-  position -1.464150813385316 -0.46883818416648815 0.812954679241839
+  orientation -0.27832827837950347 -0.5455411742126348 0.7905176763950325 5.136956250738471
+  position -0.9571327860131698 1.3989349174914103 1.3461358407661865
 }
 TexturedBackground {
 }
@@ -21,12 +21,21 @@ E-puck {
   translation 0.314828 -0.3564 2.22045e-16
 }
 Solid {
-  translation 0 0 0.04
+  translation 0 0 0.1
   children [
     Shape {
+      appearance PBRAppearance {
+        baseColor 0.0588235 1 0.654902
+        roughness 0.5
+        metalness 0.5
+      }
       geometry Box {
-        size 0.1 0.1 0.1
+        size 0.2 0.2 0.2
       }
     }
   ]
+}
+PointLight {
+  attenuation 0 0 1
+  location -0.3 -0.4 0.3
 }
