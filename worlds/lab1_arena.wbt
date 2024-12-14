@@ -9,7 +9,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation -0.17409133151540523 0.7909724251171005 0.5865618731178885 0.717969102256188
-  position -1.5168271489047986 -0.6910231695569025 1.0839666690606549
+  position -1.3119618016567207 -0.5962481832951004 0.9370281029333292
 }
 TexturedBackground {
 }
@@ -18,8 +18,4 @@ TexturedBackgroundLight {
 RectangleArena {
 }
 E-puck {
-  translation 0.372247 -0.253072 0
-}
-E-puck {
-  name "e-puck_git_test"
 }
