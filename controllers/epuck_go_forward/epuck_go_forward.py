@@ -21,10 +21,15 @@ for i in range(8):
 
 leftMotor = robot.getDevice('left wheel motor')
 rightMotor = robot.getDevice('right wheel motor')
-leftMotor.setPosition(float('inf'))
-rightMotor.setPosition(float('inf'))
-leftMotor.setVelocity(0.0)
-rightMotor.setVelocity(0.0)
+
+# leftMotor.setPosition(float('inf'))
+# rightMotor.setPosition(float('inf'))
+
+# leftMotor.setVelocity(0.0)
+# rightMotor.setVelocity(0.0)
+
+left_position = 0.0
+right_position = 0.0
 
 # feedback loop: step simulation until receiving an exit event
 while robot.step(TIME_STEP) != -1:
@@ -49,6 +54,22 @@ while robot.step(TIME_STEP) != -1:
         # turn left
         leftSpeed  = -0.5 * MAX_SPEED
         rightSpeed = 0.5 * MAX_SPEED
+        
+        
     # write actuators inputs
-    leftMotor.setVelocity(leftSpeed)
-    rightMotor.setVelocity(rightSpeed)
+    # leftMotor.setVelocity(leftSpeed)
+    # rightMotor.setVelocity(rightSpeed)
+    
+    # leftMotor.setVelocity(3.0)
+    # rightMotor.setVelocity(4.0)
+    
+    leftMotor.setPosition(left_position)
+    rightMotor.setPosition(right_position)
+    
+    left_position += MAX_SPEED * 0.5
+    right_position += MAX_SPEED * 0.001
+    
+    
+    
+    
+    
