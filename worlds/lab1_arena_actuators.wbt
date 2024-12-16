@@ -8,8 +8,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.3283294310408898 -0.1501940987281998 0.9325457186752772 3.9480438131953983
-  position 0.5529550746898695 0.548176181148675 0.8426744310804569
+  orientation -0.36898082652970987 -0.41920459381575004 0.8295303841193669 4.653154762103052
+  position -0.5525682436516931 1.569265138411329 1.9723299904830964
 }
 TexturedBackground {
 }
@@ -20,10 +20,10 @@ RectangleArena {
 E-puck {
   translation 0.314828 -0.3564 2.22045e-16
   rotation 0 0 1 1.5708
-  controller "basic_epuck_controller"
+  controller "<none>"
 }
 Robot {
-  translation -0.085172 -0.3564 0.1
+  translation -0.277136 -0.225575 -1.11022e-16
   rotation 0 0 1 1.5708
   children [
     HingeJoint {
@@ -43,7 +43,7 @@ Robot {
         }
       ]
       endPoint DEF EPUCK_LEFT_WHEEL Solid {
-        translation 0 0.026 0.02
+        translation 0 0.025999999999999985 0.02
         rotation 0 1 0 0
         children [
           DEF EPUCK_WHEEL Pose {
@@ -195,7 +195,7 @@ Robot {
         }
       ]
       endPoint DEF EPUCK_RIGHT_WHEEL Solid {
-        translation 0 -0.026 0.02
+        translation 0 -0.025999999999999985 0.02
         rotation 0 1 0 0
         children [
           Pose {
@@ -1555,7 +1555,7 @@ Robot {
       translation 0.03 0 0.0003
     }
   ]
-  name "e-puck(1)"
+  name "e-puck_actuator_tests"
   model "GCtronic e-puck"
   description "Educational robot designed at EPFL"
   boundingObject Group {
