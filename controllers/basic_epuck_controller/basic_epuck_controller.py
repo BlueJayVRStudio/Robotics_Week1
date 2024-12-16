@@ -20,6 +20,11 @@ for i in range(8):
     ds.append(robot.getDevice(f'ps{i}'))
     ds[-1].enable(timestep)
 
+ls = []
+for i in range(8):
+    ls.append(robot.getDevice(f'ls{i}'))
+    ls[-1].enable(timestep)
+
 print("Sensors initialized :)")
 
 while robot.step(timestep) != -1:
@@ -28,7 +33,13 @@ while robot.step(timestep) != -1:
     for dist in ds:
         values.append(dist.getValue())
 
-    print(values)
+    ls_values = []
+    for light_val in ls:
+        ls_values.append(light_val.getValue())
+
+    # print("distance sensors: ", values)
+    print("light sensors: ", ls_values)
+    print('\n')
 
     motor_left.setVelocity(np.pi)
     motor_right.setVelocity(np.pi)
