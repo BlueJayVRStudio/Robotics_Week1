@@ -41,8 +41,11 @@ while robot.step(timestep) != -1:
     print("light sensors: ", ls_values)
     print('\n')
 
-    motor_left.setVelocity(np.pi)
-    motor_right.setVelocity(np.pi)
+    # motor_left.setVelocity(np.pi)
+    # motor_right.setVelocity(np.pi)
+
+    motor_left.setVelocity(0)
+    motor_right.setVelocity(0)
 
 
 
