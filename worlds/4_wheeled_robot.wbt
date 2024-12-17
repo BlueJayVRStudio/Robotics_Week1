@@ -8,8 +8,8 @@ WorldInfo {
   basicTimeStep 8
 }
 Viewpoint {
-  orientation -0.26742973235812817 -0.3722198671380159 0.8887821492124027 4.923544353334398
-  position -1.043848072787759 2.74838889633357 1.9405347610282333
+  orientation -0.34037237447026064 -0.5703931916306715 0.7475280955515002 4.935822441539511
+  position -0.9984192712254842 1.9451254478791689 2.577358693493094
 }
 TexturedBackground {
 }
@@ -23,7 +23,7 @@ PointLight {
 RectangleArena {
 }
 Solid {
-  translation 0.167458 0.0597987 0.1
+  translation 0.259229 0.194575 0.1
   children [
     Shape {
       appearance PBRAppearance {
@@ -41,4 +41,27 @@ Solid {
     density -1
     mass 0.1
   }
+}
+Robot {
+  children [
+    HingeJoint {
+      endPoint DEF WHEEL1 Solid {
+      }
+    }
+    HingeJoint {
+      endPoint DEF WHEEL2 Solid {
+        name "solid(1)"
+      }
+    }
+    HingeJoint {
+      endPoint DEF WHEEL3 Solid {
+        name "solid(2)"
+      }
+    }
+    HingeJoint {
+      endPoint DEF WHEEL4 Solid {
+        name "solid(3)"
+      }
+    }
+  ]
 }
