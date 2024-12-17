@@ -8,8 +8,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.2632042187847508 -0.28904428618266054 0.9204221530575333 4.72313295778537
-  position -0.4060076927102389 2.681637169354175 1.960546093218575
+  orientation -0.22668942964142327 -0.187916965014782 0.9556668440144186 4.481560376058838
+  position 0.28141815365915346 2.3021967003670554 1.205132728076235
 }
 TexturedBackground {
 }
@@ -1633,12 +1633,12 @@ Solid {
             metalness 0.7
           }
           geometry Cylinder {
-            height 0.14
-            radius 0.02
+            height 0.1
+            radius 0.01
           }
         }
         Pose {
-          translation 0 0 0.1
+          translation 0 0 0.05
           children [
             Shape {
               appearance PBRAppearance {
@@ -1647,13 +1647,14 @@ Solid {
                 metalness 0.7
               }
               geometry Sphere {
-                radius 0.05
+                radius 0.03
+                subdivision 2
               }
             }
           ]
         }
         Pose {
-          translation 0 0 -0.1
+          translation 0 0 -0.05
           children [
             Shape {
               appearance PBRAppearance {
@@ -1662,7 +1663,8 @@ Solid {
                 metalness 0.7
               }
               geometry Sphere {
-                radius 0.05
+                radius 0.03
+                subdivision 2
               }
             }
           ]
@@ -1673,5 +1675,7 @@ Solid {
   name "dumbbell"
   boundingObject USE G0
   physics Physics {
+    density -1
+    mass 2
   }
 }
