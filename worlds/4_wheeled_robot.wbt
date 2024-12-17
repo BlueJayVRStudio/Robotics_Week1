@@ -8,8 +8,8 @@ WorldInfo {
   basicTimeStep 8
 }
 Viewpoint {
-  orientation -0.34037237447026064 -0.5703931916306715 0.7475280955515002 4.935822441539511
-  position -0.9984192712254842 1.9451254478791689 2.577358693493094
+  orientation -0.16863934793625124 -0.292481730124568 0.9412838083548315 5.184023664019167
+  position -0.3955151484106268 0.7166463924547305 0.35465656933037265
 }
 TexturedBackground {
 }
@@ -43,7 +43,16 @@ Solid {
   }
 }
 Robot {
+  translation 0 0 0.06
   children [
+    DEF bounding_box Shape {
+      appearance PBRAppearance {
+        transparency 0.5
+      }
+      geometry Box {
+        size 0.2 0.1 0.05
+      }
+    }
     HingeJoint {
       endPoint DEF WHEEL1 Solid {
       }
@@ -64,4 +73,5 @@ Robot {
       }
     }
   ]
+  boundingObject USE bounding_box
 }
