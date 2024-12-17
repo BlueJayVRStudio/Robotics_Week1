@@ -8,8 +8,8 @@ WorldInfo {
   basicTimeStep 8
 }
 Viewpoint {
-  orientation -0.16863934793625124 -0.292481730124568 0.9412838083548315 5.184023664019167
-  position -0.3955151484106268 0.7166463924547305 0.35465656933037265
+  orientation -0.23858172314927795 -0.516101007148997 0.8226290244082761 5.259259835877504
+  position -0.8509417155919535 1.0492085072906898 0.8848320617695884
 }
 TexturedBackground {
 }
@@ -23,7 +23,7 @@ PointLight {
 RectangleArena {
 }
 Solid {
-  translation 0.259229 0.194575 0.1
+  translation 0.312432 0.295028 0.1
   children [
     Shape {
       appearance PBRAppearance {
@@ -45,7 +45,7 @@ Solid {
 Robot {
   translation 0 0 0.06
   children [
-    DEF bounding_box Shape {
+    DEF BODY Shape {
       appearance PBRAppearance {
         transparency 0.5
       }
@@ -54,24 +54,17 @@ Robot {
       }
     }
     HingeJoint {
+      jointParameters HingeJointParameters {
+      }
+      device [
+        RotationalMotor {
+        }
+      ]
       endPoint DEF WHEEL1 Solid {
       }
     }
-    HingeJoint {
-      endPoint DEF WHEEL2 Solid {
-        name "solid(1)"
-      }
-    }
-    HingeJoint {
-      endPoint DEF WHEEL3 Solid {
-        name "solid(2)"
-      }
-    }
-    HingeJoint {
-      endPoint DEF WHEEL4 Solid {
-        name "solid(3)"
-      }
-    }
   ]
-  boundingObject USE bounding_box
+  boundingObject USE BODY
+  physics Physics {
+  }
 }
