@@ -1677,5 +1677,8 @@ Solid {
   physics Physics {
     density -1
     mass 2
+    centerOfMass [
+      0 0 0.01
+    ]
   }
 }
