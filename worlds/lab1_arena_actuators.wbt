@@ -6,10 +6,16 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
 
 WorldInfo {
+  basicTimeStep 8
+  contactProperties [
+    ContactProperties {
+      material2 "dumbbell_contact"
+    }
+  ]
 }
 Viewpoint {
-  orientation -0.22668942964142327 -0.187916965014782 0.9556668440144186 4.481560376058838
-  position 0.28141815365915346 2.3021967003670554 1.205132728076235
+  orientation -0.2073595165812254 -0.17698299012304433 0.9621221606897467 4.5166587558147295
+  position 0.2681662130237497 2.3167689830253075 1.0231051936906297
 }
 TexturedBackground {
 }
@@ -1623,6 +1629,7 @@ PointLight {
 }
 Solid {
   translation 0 0 0.35
+  rotation 0 1 0 1.5708
   children [
     DEF G0 Group {
       children [
@@ -1673,6 +1680,7 @@ Solid {
     }
   ]
   name "dumbbell"
+  contactMaterial "dumbbell_contact"
   boundingObject USE G0
   physics Physics {
     density -1
