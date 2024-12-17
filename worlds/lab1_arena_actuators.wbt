@@ -8,8 +8,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.24987477595651808 -0.37992441881954353 0.8906290093665892 5.011051265806988
-  position -1.071859345649349 1.9173842850465868 1.4285932386066698
+  orientation -0.2632042187847508 -0.28904428618266054 0.9204221530575333 4.72313295778537
+  position -0.4060076927102389 2.681637169354175 1.960546093218575
 }
 TexturedBackground {
 }
@@ -20,7 +20,7 @@ RectangleArena {
 E-puck {
   translation 0.314828 -0.3564 2.22045e-16
   rotation 0 0 1 1.5708
-  controller "<none>"
+  controller "epuck_tuts_controller"
 }
 Robot {
   translation -0.277136 -0.225575 -1.11022e-16
@@ -1597,7 +1597,7 @@ Robot {
   remoteControl "e-puck_bluetooth"
 }
 Solid {
-  translation 0 0 0.1
+  translation 0.396064 0.358977 0.1
   children [
     Shape {
       appearance PBRAppearance {
@@ -1620,4 +1620,58 @@ PointLight {
   attenuation 0 0 1
   location -0.5 0 0.3
   on FALSE
+}
+Solid {
+  translation 0 0 0.35
+  children [
+    DEF G0 Group {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.25098 0.25098 0.25098
+            roughness 0.25
+            metalness 0.7
+          }
+          geometry Cylinder {
+            height 0.14
+            radius 0.02
+          }
+        }
+        Pose {
+          translation 0 0 0.1
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.25098 0.25098 0.25098
+                roughness 0.25
+                metalness 0.7
+              }
+              geometry Sphere {
+                radius 0.05
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 0 0 -0.1
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.25098 0.25098 0.25098
+                roughness 0.25
+                metalness 0.7
+              }
+              geometry Sphere {
+                radius 0.05
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  name "dumbbell"
+  boundingObject USE G0
+  physics Physics {
+  }
 }
