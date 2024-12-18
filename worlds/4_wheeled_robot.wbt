@@ -8,8 +8,8 @@ WorldInfo {
   basicTimeStep 8
 }
 Viewpoint {
-  orientation 0.10396134782558762 -0.968015909801791 -0.22833579773854612 5.403856532250957
-  position -0.3860955338750874 -0.05587589647190522 0.4572285419557331
+  orientation 0.3834755463867937 -0.3528361330401589 -0.8534946798572428 4.473008155981543
+  position 0.07369587229413103 -0.5136244428309285 0.6715773773735659
 }
 TexturedBackground {
 }
@@ -45,6 +45,29 @@ Solid {
 Robot {
   translation 0 0 0.06
   children [
+    DistanceSensor {
+      translation 0.105087 0.0325072 0
+      rotation 0 0 1 0.3
+      children [
+        Shape {
+          geometry Box {
+            size 0.01 0.01 0.01
+          }
+        }
+      ]
+    }
+    DistanceSensor {
+      translation 0.105087 -0.0325072 0
+      rotation 0 0 1 -0.3
+      children [
+        Shape {
+          geometry Box {
+            size 0.01 0.01 0.01
+          }
+        }
+      ]
+      name "distance sensor(1)"
+    }
     DEF BODY Shape {
       appearance PBRAppearance {
         transparency 0.5
