@@ -44,8 +44,11 @@ while robot.step(timestep) != -1:
     # motor_left.setVelocity(np.pi)
     # motor_right.setVelocity(np.pi)
 
-    motor_left.setVelocity(0)
-    motor_right.setVelocity(0)
+    # motor_left.setVelocity(0)
+    # motor_right.setVelocity(0)
+
+    motor_left.setVelocity(ls_values[7]/1000.0)
+    motor_right.setVelocity(ls_values[0]/1000.0)
 
 
 

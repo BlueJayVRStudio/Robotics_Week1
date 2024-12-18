@@ -14,19 +14,20 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation -0.2615585458080021 -0.23244363921454358 0.936780167223614 4.530107458105894
-  position 0.14025421081886968 2.1852290329555437 1.3494408823420987
+  orientation -0.2749884204873015 -0.29859427126856636 0.913905263013346 4.704733843370356
+  position -0.296854753114707 2.1230489482756587 1.43678562888906
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
+  luminosity 0
 }
 RectangleArena {
 }
 E-puck {
   translation 0.314828 -0.3564 2.22045e-16
   rotation 0 0 1 1.5708
-  controller "epuck_tuts_controller"
+  controller "<none>"
 }
 Robot {
   translation -0.277136 -0.225575 -1.11022e-16
@@ -1624,8 +1625,9 @@ Solid {
 }
 PointLight {
   attenuation 0 0 1
+  intensity 0.2
   location -0.5 0 0.3
-  on FALSE
+  radius 1000
 }
 Solid {
   translation 0 0 0.35
