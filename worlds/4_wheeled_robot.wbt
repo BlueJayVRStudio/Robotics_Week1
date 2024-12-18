@@ -8,8 +8,8 @@ WorldInfo {
   basicTimeStep 8
 }
 Viewpoint {
-  orientation -0.23858172314927795 -0.516101007148997 0.8226290244082761 5.259259835877504
-  position -0.8509417155919535 1.0492085072906898 0.8848320617695884
+  orientation -0.20836726170734407 -0.5247011338795922 0.8253919095520948 5.3863405711913295
+  position -0.4674388844971667 0.44640912158661367 0.4043741433130227
 }
 TexturedBackground {
 }
@@ -55,12 +55,25 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
+        axis 0 1 0
+        anchor 0.05 0.06 0
       }
       device [
         RotationalMotor {
+          name "wheel1"
         }
       ]
       endPoint DEF WHEEL1 Solid {
+        translation 0.05 0.06 0
+        rotation 1 0 0 1.5708
+        children [
+          Shape {
+            geometry Cylinder {
+              height 0.02
+              radius 0.04
+            }
+          }
+        ]
       }
     }
   ]
