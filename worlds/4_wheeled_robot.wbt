@@ -9,7 +9,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation 0.3834755463867937 -0.3528361330401589 -0.8534946798572428 4.473008155981543
-  position 0.07369587229413103 -0.5136244428309285 0.6715773773735659
+  position 0.1297988172290303 -1.186452315555219 1.431738971764171
 }
 TexturedBackground {
 }
@@ -55,6 +55,7 @@ Robot {
           }
         }
       ]
+      name "ds_left"
     }
     DistanceSensor {
       translation 0.105087 -0.0325072 0
@@ -66,7 +67,7 @@ Robot {
           }
         }
       ]
-      name "distance sensor(1)"
+      name "ds_right"
     }
     DEF BODY Shape {
       appearance PBRAppearance {
@@ -203,4 +204,5 @@ Robot {
   boundingObject USE BODY
   physics Physics {
   }
+  controller "four_wheeled_collision_avoidance"
 }
